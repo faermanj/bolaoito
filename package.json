@@ -1,0 +1,33 @@
+{
+  "name": "bolaoito",
+  
+  "version": "1.0.0",
+  
+  "description": "Exemplo do AWS IoT com Intel Edison",
+  
+  "main": "index.js",
+
+  "scripts": {
+    "bolaoito": "node index.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://jfaerman@github.com/jfaerman/bolaoito.git"
+  },
+
+  "author": "",
+  "license": "Apache 2.0",
+  
+  "bugs": {
+    "url": "https://github.com/jfaerman/bolaoito/issues"
+  },
+
+  "homepage": "https://github.com/jfaerman/bolaoito#readme",
+
+  "dependencies" : {
+      "jsupm_i2clcd"  : "latest",
+      "jsupm_mma7660" : "latest",
+      "aws-iot-device-sdk" : "1.0.9"
+  }
+}
