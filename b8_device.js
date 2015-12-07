@@ -27,11 +27,11 @@ device.on('message', function(topic, payload) {
 
 function ask_fortune(){
 	var ask_time = new Date().getTime();
-	if (ask_time - last_ask > ask_limit){
-		console.log("Reading clouds...");	
+	if (ask_time - last_ask > ask_limit){		
 		last_ask = ask_time;
-		var state = { press: 1 };
+		var state = {};
 		device.publish(outTopic, JSON.stringify(state));
+		console.log("Consulting clouds...");	
 	}else {
 		console.log("Calma...")
 	} 	

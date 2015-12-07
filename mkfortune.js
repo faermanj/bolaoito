@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 
-var data_endpoint = 'A3P88OOJ9Y6RUV.iot.us-east-1.amazonaws.com';
+var data_endpoint = 'AML8FTRPU3HU.iot.us-east-1.amazonaws.com';
 var fortunes = ["Comcertezamente!","Talvez...","Desencana."]
 console.log('Loading function');
 

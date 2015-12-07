@@ -1,5 +1,5 @@
 {
-  "sql": "SELECT * FROM '8ball_topic' WHERE press > 0",
+  "sql": "SELECT * FROM '8ball_topic'",
   "description": "Ativa a funcao da sorte",
   "actions": [
     {
