@@ -5,10 +5,10 @@
   
   "description": "Exemplo do AWS IoT com Intel Edison",
   
-  "main": "index.js",
+  "main": "bolaoito.js",
 
   "scripts": {
-    "bolaoito": "node index.js"
+    "bolaoito": "node bolaoito.js"
   },
 
   "repository": {

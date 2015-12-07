@@ -1,6 +1,6 @@
 var b8 = require("./b8.js")
 var lcd = require("./b8_lcd.js");
-var acel = require("./b8_acel.js");
+var touch = require("./b8_touch.js");
 
 var awsIot = require('aws-iot-device-sdk');
 
@@ -15,7 +15,7 @@ var device = awsIot.device(b8.cfg);
 device.on('connect', function() {
     console.log('device connected!');
     device.subscribe(inTopic);
-    acel.poll(ask_fortune)
+    touch.poll(ask_fortune)
 });
 
 device.on('message', function(topic, payload) {
@@ -25,13 +25,13 @@ device.on('message', function(topic, payload) {
     b8.tell_fortune(fortune);
 });
 
-
 function ask_fortune(){
 	var ask_time = new Date().getTime();
 	if (ask_time - last_ask > ask_limit){
 		console.log("Reading clouds...");	
 		last_ask = ask_time;
-		device.publish(outTopic, JSON.stringify({ press: 1 }));
+		var state = { press: 1 };
+		device.publish(outTopic, JSON.stringify(state));
 	}else {
 		console.log("Calma...")
 	} 	

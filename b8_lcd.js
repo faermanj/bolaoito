@@ -3,7 +3,7 @@ var lcd_lib   = require ('jsupm_i2clcd');
 var lcd   = new lcd_lib.Jhd1313m1(6, 0x3E, 0x62);
 
 function lcd_pad(str){
-	if (! str) return "               ";
+	if (! str) return lcd_pad(" ");
 	if (str.length >= 16) return str.substr(0,16);
 	else return lcd_pad(str+" ");
 }
